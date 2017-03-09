@@ -29,5 +29,5 @@ console.log(config.getDbConnectionString());
 });*/
 
 //setupController(app);
-apiController(app);
+//apiController(app);
 app.listen(port);
