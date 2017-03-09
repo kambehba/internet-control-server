@@ -10,7 +10,8 @@ module.exports = function(app){
     
     //http GET
     
-    app.get('/api/outputs',function(req,res)
+    //app.get('/api/outputs',function(req,res)
+    app.get('https://internet-control.herokuapp.com/',function(req,res)
     {
         Outputs.find({},function(err,outputs)
                         {
