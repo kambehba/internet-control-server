@@ -16,7 +16,7 @@ module.exports = function(app){
         Outputs.find({},function(err,outputs)
                         {
                             if(!err)
-                            {res.send(outputs);
+                            {res.send('asdfasdf');//res.send(outputs);
                             }
                         });          
     });
