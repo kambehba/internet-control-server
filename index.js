@@ -9,10 +9,10 @@ app.use('/assets',express.static(__dirname+'/public'));
 
 //this is added to resolve cross origin problem
 app.use(function(req, res, next) {
-  //res.setHeader('Access-Control-Allow-Origin', '*');
-  //res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  //res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
- res.send("dkkkkkkkkdeded");
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+ res.send("WELCOM");
   next();
 });
 
@@ -21,7 +21,7 @@ app.set('view engine','ejs');
 
 console.log('1111111111111111');
 
-//mongoose.connect(config.getDbConnectionString());
+mongoose.connect(config.getDbConnectionString());
 console.log(config.getDbConnectionString());
 /*mongoose.connection
     .once('open', () => console.log('Good to go!'))
