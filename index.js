@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var config = require('./config/config');
 var apiController = require('./controllers/outputController')
 //var port = process.env.PORT || 3000;
-var port = process.env.MONGOHQ_URI || 3000;
+var port = process.env.MONGOLAB_URI || 3000;
 //var setupController = require('./controllers/setupController');
 app.use('/assets',express.static(__dirname+'/public'));
 
