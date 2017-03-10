@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var config = require('./config/config');
 var apiController = require('./controllers/outputController')
 //var port = process.env.PORT || 3000;
-var port = process.env.MONGODB_URI || 3000;
+var port = process.env.MONGOHQ_URI || 3000;
 //var setupController = require('./controllers/setupController');
 app.use('/assets',express.static(__dirname+'/public'));
 
@@ -22,7 +22,7 @@ app.set('view engine','ejs');
 
 console.log('1111111111111111');
 
-mongoose.connect(config.getDbConnectionString());
+mongoose.connect(config.getDbConnectionString(),{safe:true,auto_reconnect:true});
 console.log(config.getDbConnectionString());
 /*mongoose.connection
     .once('open', () => console.log('Good to go!'))
